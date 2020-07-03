@@ -11,7 +11,7 @@ const QuizData = [
 
 /* above var contains all the data of the quiz */
 
-/* create an even't listner for start button */
+/* create an event listner for start button */
 document.querySelector('#next').onclick = addQuestion;
 
 let questionNumber = 0;
