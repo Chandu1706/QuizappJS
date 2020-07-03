@@ -22,7 +22,6 @@ function addQuestion () {
     // options
 
 
-    // start button changes to next button after the first click
     const question = document.createElement('h1');
     // an empty h1 tag where question will be injetced
     let score = document.querySelector('#count').innerHTML;
