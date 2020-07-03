@@ -21,7 +21,7 @@ function addQuestion () {
     // quizDiv will be the div into which we will inject questions and
     // options
 
-    document.querySelector('#next').innerHTML = 'next';
+
     // start button changes to next button after the first click
     const question = document.createElement('h1');
     // an empty h1 tag where question will be injetced
@@ -33,7 +33,8 @@ function addQuestion () {
     // on the next button , until the end of the arrey.
     if (questionNumber === QuizData.length) {
         // condition to exicute at the end or array
-        document.querySelector('#quizDiv').innerHTML = 'You have finished the quiz.';
+        // document.querySelector('#quizDiv').innerHTML = 'You have finished the quiz.';
+        document.querySelector('#quizDiv').innerHTML = 'You have finished the quiz. <button id=\'next\'>Start again</button>';
         questionNumber++;
         document.querySelector('#next').onclick = addQuestion;
     } else if (questionNumber > QuizData.length) {
@@ -55,6 +56,11 @@ function addQuestion () {
         // funtions that check if the clicked option is the answer to the
         // question and then change score and increment question number
 
+        try {
+            document.querySelector('#next').remove();
+        } catch {
+            // do nothing
+        }
         console.log(allButtons);
         // creating a function that checks the option
 
